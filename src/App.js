@@ -12,10 +12,12 @@ const singerStyle = {
   // border radious use korte pari ni kno ....
 }
 
+{/* niche object hobar karone {} er vetor abr {} neya hoyeche */}
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>JSX</h1>
         <div className="container">
@@ -24,7 +26,8 @@ function App() {
         <div className="music">
           <p>Name: {number}</p>
           <p style={singerStyle}>Name: {singer.name} {singer.job}</p>
-          <p>Name: {singer2.name} {singer2.job}</p>
+          
+          <p style={{color: 'blue', backgroundColor:'yellow'}}>Name: {singer2.name} {singer2.job}</p>
         </div>
         <p>
         <h1></h1>
@@ -38,9 +41,38 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <h4>New component: Huh</h4>
+      <Friend></Friend>
+      <Friend></Friend>
+      <Friend></Friend>
+
+
     </div>
   );
+}
+
+function Person(){
+  return (
+    <div className='person'>
+      <h1>Sakib Al hasan</h1>
+      <p>Profession: Cricket</p>
+    </div>
+  )
+}
+
+function Friend(){
+  return(
+    <div className='container'>
+      <h3>Name: Ajay Devgun</h3>
+      <p>Job: Maramari</p>
+    </div>
+  )
 }
 
 export default App;
