@@ -2,8 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 const number = 6666;
-const singer = {name: 'Dr. Mahfujur Rahman', job: 'singer'};
-const singer2= {name:'Eva Rahman', job:'singer2'}
+const singers = [
+  {name: 'Dr. Mahfujur Rahman', job: 'singer'},
+  {name:'Eva Rahman', job:'singer2'},
+  {name:'Agun', job:'sopno'},
+  {name:'Shuvro', job:'pathor'}
+]
 
 const singerStyle = {
   color: 'purple',  //string howar jonne '' er vetor value gulo likha hoy
@@ -15,8 +19,23 @@ const singerStyle = {
 {/* niche object hobar karone {} er vetor abr {} neya hoyeche */}
 
 function App() {
+  const nayoks = ['Rubel', 'BappaRaz', 'Kuber', 'Jashim', 'SalmanShah', 'Riyaz', 'Rajjak', 'Anwoar']
   return (
     <div className="App">
+      {
+        // nayoks.map(nayok => nayok)
+        nayoks.map(nayok => <li>Name: {nayok}</li>)
+      }
+      {/* {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      } */}
+
+
+      {/* nicher tate singers er vetor theke prottekta k singer hisebe dhora hoyeche..ar sei singer hocche prottektai object */}
+
+      {
+        singers.map(singer => <Person name={singer.name}></Person>)
+      }
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>JSX</h1>
@@ -43,9 +62,9 @@ function App() {
         </a>
       </header> */}
 
-      <Person name="Rubel" nayika = "moushumi"></Person>
-      <Person name="BappaRaz" nayika= "cheka" ></Person>
-      <Person name="Kuber" nayika="Kopila"></Person>
+      {/* <Person name={nayoks[0]} nayika = "moushumi"></Person>
+      <Person name={nayoks[1]} nayika= "cheka" ></Person>
+      <Person name={nayoks[2]} nayika="Kopila"></Person> */}
       
       <h4>New component: Huh</h4>
       <Friend movie="singam" phone="017555"></Friend>
@@ -62,7 +81,7 @@ function Person(props){
   return (
     <div className='person'>
       <h1>{props.name}</h1>
-      <p>Nayika: {props.nayika}</p>
+      <p>{props.nayika}</p>
     </div>
   )
 }
