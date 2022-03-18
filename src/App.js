@@ -43,36 +43,38 @@ function App() {
         </a>
       </header> */}
 
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name="Rubel" nayika = "moushumi"></Person>
+      <Person name="BappaRaz" nayika= "cheka" ></Person>
+      <Person name="Kuber" nayika="Kopila"></Person>
+      
       <h4>New component: Huh</h4>
-      <Friend></Friend>
-      <Friend></Friend>
-      <Friend></Friend>
+      <Friend movie="singam" phone="017555"></Friend>
+      <Friend phone="017555"></Friend>
+      
 
 
     </div>
   );
 }
 
-function Person(){
+function Person(props){
+  // console.log(props)
   return (
     <div className='person'>
-      <h1>Sakib Al hasan</h1>
-      <p>Profession: Cricket</p>
+      <h1>{props.name}</h1>
+      <p>Nayika: {props.nayika}</p>
     </div>
   )
 }
 
-function Friend(){
+function Friend(props){
+  console.log(props)
   return(
     <div className='container'>
-      <h3>Name: Ajay Devgun</h3>
-      <p>Job: Maramari</p>
+      <h3>Name: {props.movie}</h3>
+      <p>phone: {props.phone}</p>
     </div>
   )
 }
-
+//data pathanor jonne props
 export default App;
